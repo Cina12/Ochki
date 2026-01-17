@@ -1,0 +1,24 @@
+print("=== СИСТЕМА ОБНАРУЖЕНИЯ ЭКЗОПЛАНЕТ ===") 
+mass = float(input("Введите массу планеты (в массах Земли): ")) 
+distance = float(input("Введите расстояние до звезды (в а.е.): ")) 
+if 0.1<= mass<=1:
+   planet_type = "Остероид"
+elif 1.1<= mass<=2:
+    planet_type = "Земного типа"
+elif mass < 10:
+    planet_type = "Супер-Земля"
+elif mass < 50:
+    planet_type = "Газовый гигант"
+else:
+    planet_type = "Сврехгигант"
+if 0.8<= distance<=1  and planet_type == "Земного типа":
+    life  = "шанс жизни высок " 
+elif distance >= 1.6 and distance <= 2.4: 
+    life = "Возможна жизнь (нужны исследования)" 
+else: 
+    life = ("Жизнь маловероятна")
+print("\n--- РЕЗУЛЬТАТ АНАЛИЗА ---") 
+print("Тип объекта:", planet_type )
+print("Расстояние от звезды:", distance, "а.е.") 
+print("Вывод:", life) 
+print("Анализ завершён")
